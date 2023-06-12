@@ -21,16 +21,21 @@ the deliverables! Completing these deliverables will also require understanding
 of all the previous topics from this section, including initializing state,
 passing data and callback functions as props, and working with events.
 
-## Deliverables
+// App
+  // Header
+  // Shoppinglist
+     //   ItemForm
+     //   Filter
+     //   Item
+
+## Deliverables ===========================
 
 ### Filter
 
 In the filter component, there is a new input field for searching our list.
-_When the user types in this field_, the list of items should be filtered so
-that only items with names that match the text are included.
+_When the user types in this field_, the list of items should be filtered so that only items with names that match the text are included.
 
-- Determine where you need to add state for this feature. What components need
-  to know about the search text?
+- Determine where you need to add state for this feature. What components need to know about the search text?
 
 - Once you've determined which component should hold the state for this feature,
   set up your initial state, and connect that state to the input field.
@@ -56,10 +61,15 @@ There is a new component called `ItemForm` that will allow us to add new items
 to our shopping list. _When the form is submitted_, a new item should be created
 and added to our list of items.
 
-- Make all the input fields for this form controlled inputs, so that you can
-  access all the form data via state. When setting the initial state for the
-  `<select>` tag, use an initial value of "Produce" (since that's the first
+- Make all the input fields for this form controlled inputs, so that you can  access all the form data via state. When setting the initial state for the   `<select>` tag, use an initial value of "Produce" (since that's the first
   option in the list).
+
+  // 1) what state vars needed for item form? 
+  //    (item)
+  // 2) what components need access to item form state?
+  //    ShoppingList (parent) ItemForm (child)
+  // 3) where put state? common component?
+  //    ShoppingList
 
 - Handle the form's _submit_ event, and use the data that you have saved in
   state to create a new item object with the following properties:
@@ -93,3 +103,11 @@ and added to our list of items.
 ## Resources
 
 - [React Forms](https://facebook.github.io/react/docs/forms.html)
+
+
+App
+    Header
+    ShoppingList
+        ItemForm
+        Filter
+        Item
